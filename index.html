@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+<meta http-equiv="X-UA-compatible" content="IE=edge">
+
+<meta http-equiv="subject" content="" />
+<meta http-equiv="title" content="" />
+<meta http-equiv="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+
+<link rel="stylesheet" type="text/css" href="./assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+<script type="text/javascript" src="./assets/js/plugin/jquery-3.4.1.min.js"></script>
+<title>pay2pay</title>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- contents -->
+        <div class="contents payment">
+            <div class="sec-kv bg-deco-txt">
+                <div class="tit-area">
+                    <p class="logo-txt">Pay2Pay</p>
+                    <span class="desc">가맹점명</span>
+                    <h1 class="tit">주식회사 이로홀딩스</h1>
+                </div>
+            </div>
+            <div class="section payment-info">
+                <div class="inner">
+                    <h2 class="sub-tit">청구내용</h2>
+                    <div class="info-box">
+                        <div class="inner">
+                            <dl>
+                                <dt>상품명</dt>
+                                <dd>A02 상품</dd> 
+                            </dl>
+                            <dl>
+                                <dt>상품설명</dt>
+                                <dd class="desc">박준혁 학생 여름특강 수업료 <br/> - 10회 20% <span class="c-gray">(영어+수학+교재비)</span></dd> 
+                            </dl> 
+                            <dl>
+                                <dt>상품 단가</dt>
+                                <dd>100원</dd> 
+                            </dl>
+                             <dl>
+                                <dt>수량</dt>
+                                <dd class="count">
+                                     <button type="button" class="icon-minus"></button>
+                                     <span class="num">1</span>
+                                     <button type="button" class="icon-plus"></button>
+                                </dd> 
+                            </dl>
+                            <dl class="total-price">
+                                 <dt>총 금액 </dt>
+                                 <dd><strong>100</strong>원</dd> 
+                             </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="ly-hr">
+            <div class="section payer-info bg-gray">
+                <div class="inner">
+                    <h2 class="sub-tit">
+                        결제자 정보 입력
+                        <span class="desc">* 은 필수 입력 값</span>
+                    </h2>
+                    <div class="inp-list">
+                        <dl>
+                            <dt>이름 <sup>*</sup></dt>
+                            <dd>
+                                <input type="text" placeholder="이름 입력" required class="inp-sm" />
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>휴대폰번호 <sup>*</sup></dt>
+                            <dd>
+                                <input type="number" placeholder="휴대폰번호 입력" value="01012341234" required class="inp-sm" />
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>이메일</dt>
+                            <dd>
+                                <input type="email" placeholder="카드결제 내역을 받을 이메일 주소 입력" class="inp-l" />
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>요청사항</dt>
+                            <dd>
+                                <textarea placeholder="최대 200자 가능"></textarea>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <hr class="ly-hr">
+            <div class="section address-info">
+                <div class="inner accordion-wrap">
+                    <h2 class="sub-tit">
+                        배송지 정보 입력 <small>(선택)</small>
+                        <button type="button" class="icon-more"></button>
+                    </h2>
+                    <div class="detail">
+                        <div class="inp">
+                            <input type="checkbox" id="payerInfo"/>
+                            <label for="payerInfo">
+                                결제자 정보와 동일
+                            </label>
+                        </div>
+                        <div class="inp-list">
+                            <dl>
+                                <dt>이름</dt>
+                                <dd>
+                                    <input type="text" placeholder="이름 입력" class="inp-sm" />
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>전화번호</dt>
+                                <dd>
+                                    <input type="number" placeholder="휴대폰번호 입력" value="01012341234" class="inp-sm" />
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>주소</dt>
+                                <dd class="inp-address">
+                                    <div class="inp">
+                                        <input type="number" placeholder="우편번호(클릭 시 검색)" class="inp-sm" />
+                                        <a href="#!" class="btn-line btn-s">주소 찾기</a>
+                                    </div>
+                                    <input type="text" placeholder="주소 (클릭 시 검색)" class="inp-ml" />
+                                    <input type="text" placeholder="상세주소" class="inp-ml" />
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="ly-hr">
+            <div class="section payment-method bg-gray">
+                <div class="inner">
+                    <h2 class="sub-tit">지불방법</h2>
+                    <ul class="tab-list">
+                        <li class="active">카드번호로 결제</li>
+                        <li>
+                            <a href="#!">인증결제</a>
+                        </li>
+                        <li class="kakao-pay">
+                            <a href="#!">
+                                <span class="hidden">카카오페이 결제</span>
+                            </a>
+                        </li>
+                        <li class="naver-pay">
+                            <a href="#!">
+                                <span class="hidden">네이버페이 결제</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-panel active">
+                        <div class="inp-list">
+                            <dl>
+                                <dt>할부선택</dt>
+                                <dd class="inp-select">
+                                    <select class="inp-sm">
+                                        <option>일시불</option>
+                                        <option>1개월</option>
+                                        <option>2개월</option>
+                                        <option>3개월</option>
+                                    </select>
+                                    <a href="#!" class="btn-line btn-s">무이자 할부카드 안내</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>카드번호</dt>
+                                <dd class="card-num">
+                                    <input type="number" maxlength="4" />
+                                    <i class="icon-line"></i>
+                                    <input type="number" maxlength="4" />
+                                    <i class="icon-line"></i>
+                                    <input type="number" maxlength="4" />
+                                    <i class="icon-line"></i>
+                                    <input type="number" maxlength="4" />
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>유효기간</dt>
+                                <dd class="card-day">
+                                    <select>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                    <select class="inp-s">
+                                        <option>2023</option>
+                                        <option>2024</option>
+                                        <option>2025</option>
+                                        <option>2026</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>하나카드 사용</dt>
+                                <dd>
+                                    <input type="checkbox" id="hannaCardChk"/>
+                                    <label for="hannaCardChk">
+                                        [하나카드]로 결제하시는 경우 체크해 주세요.
+                                    </label>
+                                </dd>
+                            </dl>
+                            <div class="hana-card-con">
+                                <dl>
+                                    <dt>생년월일/사업자등록번호</dt>
+                                    <dd>
+                                        <input type="number" placeholder="개인은 생년월일 입력 / 법인은 사업자등록번호 입력" class="inp-l"/>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>카드비밀번호 앞 2자리</dt>
+                                    <dd class="inp-password">
+                                        <label>
+                                            <input type="number" placeholder="" maxlength="2" id="password"/>
+                                            <span class="default-txt">**</span>
+                                        </label>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>이메일</dt>
+                                    <dd>
+                                        <input type="email" placeholder="카드결제 내역을 받을 이메일 주소 입력" class="inp-l" />
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>휴대폰번호</dt>
+                                    <dd>
+                                        <input type="number" placeholder="휴대폰번호 입력" value="01012341234" class="inp-sm" />
+                                        <p class="notice-txt">인증번호가 발송될 고객님의 휴대폰 번호입니다.</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-btn">
+                <button type="submit" class="btn-bg btn-m">결제하기</button>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        <div class="payment-footer bg-deco-txt">
+            <ul class="txt-list">
+                <li>(주)이로홀딩스 ㅣ 대표자 : 임진우</li>
+                <li class="bold">02-6093-3355</li>
+                <li class="small">※ 상품 주문, 배송 및 환불의 의무와 책임은 판매업체에 있습니다.</li>
+            </ul>
+        </div>
+        <!--// footer -->
+    </div>
+    <script>
+        $(function(){
+            $(".payment-method input[type=\"checkbox\"]").on("change", function(){
+                const $this = $(this);
+                const hanaCardCon = $this.closest("dl").siblings(".hana-card-con");
+                if($this.is(":checked")){
+                    hanaCardCon.show();
+                } else{
+                    hanaCardCon.hide();
+                }
+            });
+
+            $(".accordion-wrap .icon-more").on("click", function(){
+                const $this = $(this);
+                const detail = $this.parent().siblings(".detail");
+                
+                detail.toggle();
+            });
+        });
+    </script>
+</body>
+</html>
