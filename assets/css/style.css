@@ -935,6 +935,10 @@
 		font-size: 3.89vw;
 	}
 
+	.contents.payment .payment-method .hana-card-con{
+		margin-bottom: 16.66vw;
+	}
+
 	.contents.payment .payment-method .hana-card-con label {
 		width: 100%;
 	}
