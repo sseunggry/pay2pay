@@ -24,7 +24,7 @@
 }
 
 .contents.payment .section {
-	margin-top: 80px;
+	margin-top: 60px;
 }
 
 .contents.payment .section > .inner {
@@ -33,7 +33,7 @@
 }
 
 .contents.payment .section.bg-gray {
-	padding: 80px 0;
+	padding: 60px 0;
 	background-color: #f8f8f8;
 }
 
@@ -48,20 +48,20 @@
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	margin-bottom: 30px;
-	font-size: 32px;
+	font-size: 28px;
 	font-weight: 700;
 	color: #222;
 }
 
 .contents.payment .sub-tit small {
 	margin-right: auto;
-	font-size: 28px;
+	font-size: 24px;
 	font-weight: 300;
 	color: #666;
 }
 
 .contents.payment .sub-tit .desc {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 400;
 	color: #666;
 }
@@ -284,22 +284,22 @@
 
 .contents.payment .icon-minus {
 	display: inline-block;
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	background: url("../img/ico_minus_1.png") no-repeat center/100% auto;
 }
 
 .contents.payment .icon-plus {
 	display: inline-block;
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	background: url("../img/ico_plus_1.png") no-repeat center/100% auto;
 }
 
 .contents.payment .icon-more {
 	display: inline-block;
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	background: url("../img/ico_more.png") no-repeat center/100% auto;
 }
 
@@ -334,7 +334,7 @@
 .contents.payment .sec-kv .tit-area {
 	position: relative;
 	margin: 0 auto;
-	padding: 80px 0;
+	padding: 40px 0;
 	width: 1200px;
 	color: #fff;
 	text-align: center;
@@ -347,11 +347,19 @@
 }
 
 .contents.payment .sec-kv .tit {
-	font-size: 60px;
+	font-size: 40px;
 	font-weight: 200;
 }
 
 .contents.payment .sec-kv .logo-txt {
+	margin-bottom: 10px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+}
+
+/* .contents.payment .sec-kv .logo-txt {
 	position: absolute;
 	top: 30px;
 	left: 0;
@@ -359,7 +367,7 @@
 	font-size: 24px;
 	font-weight: 700;
 	color: #fff;
-}
+} */
 
 .contents.payment .payment-info .info-box {
 	padding: 40px 0 20px;
@@ -387,7 +395,7 @@
 }
 
 .contents.payment .payment-info .info-box dl + dl {
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 .contents.payment .payment-info .info-box dl.total-price {
@@ -426,20 +434,20 @@
 	margin-right: 10px;
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
-	font-size: 18px;
+	font-size: 16px;
 	color: #222;
 	opacity: 0.7;
 }
 
 .contents.payment .payment-info .info-box dd {
 	font-family: "Montserrat", "Noto Sans KR", sans-serif;
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: 700;
 	color: #222;
 }
 
 .contents.payment .payment-info .info-box dd.desc {
-	font-size: 18px;
+	font-size: 16px;
 	text-align: right;
 	word-break: keep-all;
 }
@@ -502,8 +510,8 @@
 
 .contents.payment .payment-method .tab-list li.active {
 	font-weight: 700;
-	color: #fff;
-	background-color: #4773b4;
+	color: #4773b4;
+	border-color: #4773b4;
 }
 
 .contents.payment .payment-method .tab-panel {
@@ -550,7 +558,7 @@
 }
 
 .contents.payment .address-info .detail {
-	margin-top: 15px;
+	/* margin-top: 15px; */
 }
 
 .contents.payment .page-btn {
@@ -592,13 +600,13 @@
 
 @media (max-width: 1280px) {
 	.contents.payment .sec-kv .tit-area {
-		padding: 80px 40px;
+		padding: 40px;
 		width: 100%;
 	}
 
-	.contents.payment .sec-kv .tit-area .logo-txt {
+	/* .contents.payment .sec-kv .tit-area .logo-txt {
 		left: 40px;
-	}
+	} */
 
 	.contents.payment .section > .inner {
 		padding: 0 40px;
@@ -662,13 +670,13 @@
 
 	.contents.payment .ly-hr {
 		display: block;
-		margin-top: 12.5vw;
+		margin-top: 9.72vw;
 		height: 2.78vw;
 		background-color: #eee;
 	}
 
 	.contents.payment .section {
-		margin-top: 11.11vw;
+		margin-top: 8.33vw;
 	}
 
 	.contents.payment .section > .inner {
@@ -682,8 +690,8 @@
 	}
 
 	.contents.payment .sub-tit {
-		margin-bottom: 5.56vw;
-		font-size: 5.83vw;
+		margin-bottom: 4.17vw;
+		font-size: 5.00vw;
 	}
 
 	.contents.payment .sub-tit small {
@@ -691,7 +699,7 @@
 	}
 
 	.contents.payment .sub-tit .desc {
-		font-size: 3.33vw;
+		font-size: 2.78vw;
 	}
 
 	.contents.payment [class*=btn] {
@@ -715,10 +723,14 @@
 		font-size: 4.44vw;
 	}
 
+	.contents.payment .inp-list{
+		border-top: 0.42vw solid #eee;
+	}
+
 	.contents.payment .inp-list dl {
 		grid-template-columns: auto;
-		padding: 8.33vw 0;
-		border-top-width: 0.28vw;
+		padding: 6.94vw 0 0;
+		border-top: none;
 	}
 
 	.contents.payment .inp-list dl:last-child {
@@ -729,7 +741,7 @@
 	.contents.payment .inp-list dt {
 		margin-bottom: 4.17vw;
 		padding: 0;
-		font-size: 4.44vw;
+		font-size: 3.89vw;
 	}
 
 	.contents.payment .inp-list dd.inp-select {
@@ -763,10 +775,11 @@
 		padding: 0 2.78vw;
 		width: 100%;
 		height: 13.89vw;
+		font-size: 3.89vw;
 		border-radius: 1.39vw;
 		background-position: right 2.78vw center;
 		background-size: 5.56vw auto;
-		font-size: 3.89vw;
+		border-width: 0.28vw;
 	}
 
 	.contents.payment select + select {
@@ -777,8 +790,9 @@
 		padding: 0 2.78vw;
 		width: 100%;
 		height: 13.89vw;
-		font-size: 3.89vw;
+		font-size: 3.33vw;
 		border-radius: 1.39vw;
+		border-width: 0.28vw;
 	}
 
 	.contents.payment input[type=checkbox] ~ label {
@@ -801,6 +815,7 @@
 		height: 33.33vw;
 		font-size: 3.89vw;
 		border-radius: 1.39vw;
+		border-width: 0.28vw;
 	}
 
 	.contents.payment .inp-address {
@@ -839,7 +854,7 @@
 
 	.contents.payment .notice-txt {
 		padding-left: 1.39vw;
-		font-size: 3.33vw;
+		font-size: 2.78vw;
 	}
 
 	.contents.payment .notice-txt::before {
@@ -853,7 +868,7 @@
 	}
 
 	.contents.payment .sec-kv .tit-area {
-		padding: 11.11vw 5.56vw;
+		padding: 5.56vw;
 	}
 
 	.contents.payment .sec-kv .desc {
@@ -861,14 +876,19 @@
 	}
 
 	.contents.payment .sec-kv .tit {
-		font-size: 8.33vw;
+		font-size: 5.56vw;
 	}
 
 	.contents.payment .sec-kv .logo-txt {
+		margin-bottom: 1.94vw;
+		font-size: 2.78vw;
+	}
+
+	/* .contents.payment .sec-kv .logo-txt {
 		top: 4.17vw;
 		left: 0;
 		font-size: 3.33vw;
-	}
+	} */
 
 	.contents.payment .payment-info .info-box {
 		padding: 11.11vw 0 5.56vw;
@@ -904,11 +924,11 @@
 
 	.contents.payment .payment-info .info-box dt {
 		margin-right: 11.11vw;
-		font-size: 3.89vw;
+		font-size: 3.33vw;
 	}
 
 	.contents.payment .payment-info .info-box dd {
-		font-size: 4.44vw;
+		font-size: 4.17vw;
 	}
 
 	.contents.payment .payment-info .info-box dd.desc {
@@ -931,12 +951,9 @@
 
 	.contents.payment .payment-method .tab-list li {
 		height: 13.89vw;
-		border-radius: 1.39vw;
 		font-size: 3.89vw;
-	}
-
-	.contents.payment .payment-method .hana-card-con{
-		margin-bottom: 16.66vw;
+		border-radius: 1.39vw;
+		border-width: 0.28vw;
 	}
 
 	.contents.payment .payment-method .hana-card-con label {
@@ -967,30 +984,29 @@
 
 	.contents.payment .page-btn {
 		padding: 0 5.56vw;
-		margin-top: 2.78vw;
+		margin-top: 11.11vw;
 	}
 
 	.payment-footer {
 		margin-top: 22.22vw;
-		padding: 8.33vw 0;
+		padding: 5.56vw 0;
 	}
 
 	.payment-footer .txt-list {
 		padding: 0 5.56vw;
-		font-size: 3.33vw;
+		font-size: 2.78vw;
 	}
 
 	.payment-footer .txt-list .bold {
 		margin-bottom: 2.78vw;
-		font-size: 5.56vw;
+		font-size: 4.44vw;
 	}
 
 	.payment-footer .txt-list .small {
-		font-size: 3.33vw;
+		font-size: 2.50vw;
 	}
 
 	.payment-footer.bg-deco-txt::after {
 		bottom: -6.94vw;
 	}
 }
-/*# sourceMappingURL=maps/style.css.map */
