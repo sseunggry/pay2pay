@@ -269,6 +269,9 @@
         <!--// footer -->
     </div>
     <script>
+        const contentPayment = $('.contents.payment');
+        const secKeyVisual = $('.contents.payment .sec-kv');
+
         $(function(){
             $(".payment-method input[type=\"checkbox\"]").on("change", function(){
                 const $this = $(this);
@@ -286,6 +289,10 @@
                 
                 detail.toggle();
             });
+
+            if(secKeyVisual.length) {
+                contentPayment.css('padding-top', secKeyVisual.innerHeight() + 'px');
+            }
         });
     </script>
 </body>
